@@ -7,6 +7,7 @@ class Application {
 
         LinkedList<Candidato> candidatos;
         LinkedList<Empresa> empresas
+
         try {
             File arquivoCandidatos = new File("src/listOfCandidates");
             File arquivoEmpresas = new File("src/listOfCompanies");
@@ -16,6 +17,7 @@ class Application {
         }
         catch (FileNotFoundException e) {
             e.printStackTrace()
+            return;
         }
 
         Scanner input = new Scanner(System.in);
@@ -39,7 +41,7 @@ class Application {
                 }
             }
             catch (Exception e) {
-                println "Entrada inválida"
+                e.print("Entrada inválida");
             }
         }
     }
