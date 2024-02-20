@@ -6,5 +6,5 @@ import groovy.transform.ToString
 @ToString(includePackage = false, includeSuperProperties = true, includeNames = true)
 @EqualsAndHashCode
 class Empresa extends Usuario {
-    String cnpj, pais;
+    String cnpj, pais
 }

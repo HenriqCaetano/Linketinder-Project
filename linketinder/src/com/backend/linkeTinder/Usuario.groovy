@@ -4,8 +4,6 @@ import groovy.transform.ToString
 
 @ToString
 class Usuario {
-
-    String nome, email, estado, cep, descricao;
-    LinkedList<String> competencias;
-
+    String nome, email, estado, cep, descricao
+    LinkedList<String> competencias
 }
