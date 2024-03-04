@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastrar candidato</title>
+
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+    <form id="form-candidato">
+        <label for="email-input">Email</label>
+        <input id='email-input' type="text" class="input" name="email">
+
+        <label for="senha-input">Senha</label>
+        <input id="senha-input" type="password" class="input" name="senha">
+
+        <label for="nome-input">Nome</label>
+        <input id='nome-input' type="text" class="input" name="nome">
+
+
+        <label for="estado-input">Estado</label>
+        <select id="estado-input" name="estado" class="input">
+            <option value="AC">Acre</option>
+            <option value="AL">Alagoas</option>
+            <option value="AP">Amapá</option>
+            <option value="AM">Amazonas</option>
+            <option value="BA">Bahia</option>
+            <option value="CE">Ceará</option>
+            <option value="DF">Distrito Federal</option>
+            <option value="ES">Espírito Santo</option>
+            <option value="GO">Goiás</option>
+            <option value="MA">Maranhão</option>
+            <option value="MT">Mato Grosso</option>
+            <option value="MS">Mato Grosso do Sul</option>
+            <option value="MG">Minas Gerais</option>
+            <option value="PA">Pará</option>
+            <option value="PB">Paraíba</option>
+            <option value="PR">Paraná</option>
+            <option value="PE">Pernambuco</option>
+            <option value="PI">Piauí</option>
+            <option value="RJ">Rio de Janeiro</option>
+            <option value="RN">Rio Grande do Norte</option>
+            <option value="RS">Rio Grande do Sul</option>
+            <option value="RO">Rondônia</option>
+            <option value="RR">Roraima</option>
+            <option value="SC">Santa Catarina</option>
+            <option value="SP">São Paulo</option>
+            <option value="SE">Sergipe</option>
+            <option value="TO">Tocantins</option>
+        </select>
+
+
+        <label for="cep-input">CEP</label>
+        <input id="cep-input" type="text" class="input" name="cep">
+
+        <label for="descricao-input">Sua descrição</label>
+        <input id="descricao-input" type="text" class="input" name="descricao">
+
+        <label for="cpf-input">CPF</label>
+        <input id="cpf-input" type="text" class="input" name="cpf">
+
+        <label for="idade-input">Data de nascimento</label>
+        <input id="idade-input" type="date" class="input" name="dataNascimento">
+
+        <label for="competencias-input">Suas competências (separadas por vírgula)</label>
+        <input id="competencias-input" type="text" class="input" name="competencias">
+
+        <button id="candidato-submit" type="submit" class="input">Cadastrar</button>
+    </form>
+
+
+    <script src="../scripts/scriptCadastroCandidatos.js"></script>
+</body>
+</html>
