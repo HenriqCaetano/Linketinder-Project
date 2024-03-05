@@ -1,5 +1,7 @@
-// import {Candidato} from "./Candidato";
+import {Candidato} from "./Candidato";
 
+
+let listaCandidatos : Candidato[] = [];
 
 const submitButton: HTMLElement = document.getElementById("candidato-submit");
 const form:any = document.getElementById("form-candidato")
@@ -31,4 +33,7 @@ submitButton.addEventListener("click", (e:MouseEvent) =>{
     })
 
     //constroi o candidato e adiciona à lista de candidatos
+    let novoCandidato : Candidato = new Candidato(nome, email, senha,estado, cep, descricao, competencias, cpf, idade);
+    console.log(novoCandidato);
+    listaCandidatos.push(novoCandidato);
 })

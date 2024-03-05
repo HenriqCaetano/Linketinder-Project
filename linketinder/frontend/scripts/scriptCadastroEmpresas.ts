@@ -1,5 +1,6 @@
-// import {Empresa} from "./Empresa";
+import {Empresa} from "./Empresa";
 
+let listaEmpresas : Empresa[] = [];
 
 const submitButton: HTMLElement = document.getElementById("empresa-submit");
 const form:any = document.getElementById("form-empresa")
@@ -19,7 +20,7 @@ submitButton.addEventListener("click", (e:MouseEvent) =>{
     let cep:string = formData.get("cep").toString();
     let pais:string = formData.get("pais").toString();
     let descricao:string = formData.get("descricao").toString();
-    let cpf:string = formData.get("cnpj").toString();
+    let cnpj:string = formData.get("cnpj").toString();
 
 
     //obtém as competências e retira espaços em branco
@@ -29,4 +30,7 @@ submitButton.addEventListener("click", (e:MouseEvent) =>{
     })
 
     //constroi a empresa e adiciona à lista de empresas
+    let novaEmpresa : Empresa = new Empresa(nome, email, senha, estado, cep, descricao, competencias, cnpj, pais);
+    console.log(novaEmpresa);
+    listaEmpresas.push(novaEmpresa);
 })
