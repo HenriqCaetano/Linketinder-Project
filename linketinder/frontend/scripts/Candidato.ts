@@ -5,11 +5,12 @@ export class Candidato extends Usuario{
     private _idade: number;
 
 
-    constructor(nome: string, email: string, estado: string, cep: string, descricao: string, competencias: string[], cpf: string, idade: number) {
-        super(nome, email, estado, cep, descricao, competencias);
+    constructor(nome: string, email: string, senha: string, estado: string, cep: string, descricao: string, competencias: string[], cpf: string, idade: number) {
+        super(nome, email, senha, estado, cep, descricao, competencias);
         this._cpf = cpf;
         this._idade = idade;
     }
+
 
     get cpf(): string {
         return this._cpf;

@@ -5,8 +5,8 @@ export class Empresa extends Usuario{
     private _pais: string;
 
 
-    constructor(nome: string, email: string, estado: string, cep: string, descricao: string, competencias: string[], cnpj: string, pais: string) {
-        super(nome, email, estado, cep, descricao, competencias);
+    constructor(nome: string, email: string, senha: string, estado: string, cep: string, descricao: string, competencias: string[], cnpj: string, pais: string) {
+        super(nome, email, senha, estado, cep, descricao, competencias);
         this._cnpj = cnpj;
         this._pais = pais;
     }
