@@ -25,7 +25,7 @@ submitButton.addEventListener("click", (e:MouseEvent) =>{
 
     //obtém as competências e retira espaços em branco
     let competencias:string[] = formData.get("competencias").toString().split(",");
-    competencias.forEach((value, index) => {
+    competencias.forEach((value:string, index: number) => {
         competencias[index] = value.trim();
     })
 
