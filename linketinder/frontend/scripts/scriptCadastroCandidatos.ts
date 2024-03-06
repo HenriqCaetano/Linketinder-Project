@@ -1,7 +1,7 @@
 import {Candidato} from "./Candidato.js";
 
 
-let listaCandidatos : Candidato[] = [];
+export let listaCandidatos : Candidato[] = [];
 
 const submitButton: HTMLElement = document.getElementById("candidato-submit");
 const form:any = document.getElementById("form-candidato")
