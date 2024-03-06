@@ -1,6 +1,6 @@
 import {Empresa} from "./Empresa.js";
 
-let listaEmpresas : Empresa[] = [];
+export let listaEmpresas : Empresa[] = [];
 
 const submitButton: HTMLElement = document.getElementById("empresa-submit");
 const form:any = document.getElementById("form-empresa")
