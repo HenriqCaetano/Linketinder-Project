@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    "outDir": "./",
+    "module": "ES2022",
+    "target": "ES6",
+    "lib": ["DOM"],
+    "sourceMap": true,
+    "allowJs": true,
+    "jsx": "react",
+    "moduleResolution": "node",
+    "rootDir": "./",
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noImplicitAny": true,
+    "strictNullChecks": false,
+    "suppressImplicitAnyIndexErrors": true,
+    "experimentalDecorators": true,
+    "types": [
+      "node",
+      "webpack-env"
+    ]
+  },
+  "files": [
+    "Empresa.ts",
+    "Candidato.ts",
+    "Usuario.ts",
+    "scriptCadastroCandidatos.ts",
+    "scriptCadastroEmpresas.ts"
+
+  ]
+}
