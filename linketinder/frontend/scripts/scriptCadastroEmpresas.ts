@@ -1,4 +1,4 @@
-import {Empresa} from "./Empresa";
+import {Empresa} from "./Empresa.js";
 
 let listaEmpresas : Empresa[] = [];
 
