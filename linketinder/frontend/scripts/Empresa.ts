@@ -1,12 +1,12 @@
-import {Usuario} from "./Usuario";
+import {Usuario} from "./Usuario.js";
 
 export class Empresa extends Usuario{
     private _cnpj: string;
     private _pais: string;
 
 
-    constructor(nome: string, email: string, senha: string, estado: string, cep: string, descricao: string, competencias: string[], cnpj: string, pais: string) {
-        super(nome, email, senha, estado, cep, descricao, competencias);
+    constructor(nome: string, email: string, senha: string, cep: string, descricao: string, competencias: string[], cnpj: string, pais: string) {
+        super(nome, email, senha, cep, descricao, competencias);
         this._cnpj = cnpj;
         this._pais = pais;
     }
