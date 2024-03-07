@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "outDir": "./",
+    "outDir": "./b",
     "module": "ES2022",
     "target": "ES6",
     "lib": ["DOM"],
@@ -26,7 +26,8 @@
     "Candidato.ts",
     "Usuario.ts",
     "scriptCadastroCandidatos.ts",
-    "scriptCadastroEmpresas.ts"
-
+    "scriptCadastroEmpresas.ts",
+    "scriptPerfilEmpresa.ts",
+    "scriptPerfilCandidato.ts",
   ]
 }
