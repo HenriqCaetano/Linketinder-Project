@@ -1,13 +1,13 @@
 import {Candidato} from "./Candidato";
-import Chart from 'chart.js/auto';
+// import Chart from 'chart.js/auto';
 
 
 
-const displayCandidatos:HTMLElement = document.getElementById("lista-candidatos");
-const listaCandidatos: Candidato[] = localStorage.getItem('listaCandidatos')
+const displayCandidatos : HTMLElement = document.getElementById("lista-candidatos");
+const listaCandidatos :Candidato[]= JSON.parse(localStorage.getItem('listaCandidatos'))
 
 
-//gráfico
+//construção do objeto do gráfico
 type entrada = {
     competencia : string;
     quantidade : number;
@@ -15,17 +15,11 @@ type entrada = {
 
 let dadosGrafico: entrada[] = []
 
-
-
-for (const candidato:Candidato of listaCandidatos) {
+listaCandidatos.forEach((candidato : Candidato) => {
     displayCandidatos.innerHTML += `<li>Descrição: ${candidato.descricao}, Competências: ${candidato.competencias} <li>`
+})
 
-    for (let competencia of candidato.competencias) {
-        for (const key in dadosGrafico) {
 
-        }
-    }
-}
 
 
 
