@@ -1,7 +1,8 @@
 import {Candidato} from "./Candidato.js";
 
 
-export let listaCandidatos : Candidato[] = [];
+let listaCandidatos : Candidato[] = [];
+localStorage.setItem("listaCandidatos", listaCandidatos);
 
 const submitButton: HTMLElement = document.getElementById("candidato-submit");
 const form:any = document.getElementById("form-candidato")
@@ -36,4 +37,5 @@ submitButton.addEventListener("click", (e:MouseEvent) =>{
     let novoCandidato : Candidato = new Candidato(nome, email, senha,estado, cep, descricao, competencias, cpf, idade);
     console.log(novoCandidato);
     listaCandidatos.push(novoCandidato);
+    localStorage.setItem("listaCandidatos", listaCandidatos);
 })

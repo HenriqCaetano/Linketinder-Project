@@ -1,6 +1,7 @@
 import {Empresa} from "./Empresa.js";
 
-export let listaEmpresas : Empresa[] = [];
+let listaEmpresas : Empresa[] = [];
+localStorage.setItem("listaEmpresas", listaEmpresas);
 
 const submitButton: HTMLElement = document.getElementById("empresa-submit");
 const form:any = document.getElementById("form-empresa")
@@ -33,4 +34,5 @@ submitButton.addEventListener("click", (e:MouseEvent) =>{
     let novaEmpresa : Empresa = new Empresa(nome, email, senha, estado, cep, descricao, competencias, cnpj, pais);
     console.log(novaEmpresa);
     listaEmpresas.push(novaEmpresa);
+    localStorage.setItem("listaEmpresas", listaEmpresas);
 })
