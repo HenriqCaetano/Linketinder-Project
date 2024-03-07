@@ -1,9 +1,9 @@
 {
   "compilerOptions": {
-    "outDir": "./b",
+    "outDir": "./",
     "module": "ES2022",
     "target": "ES6",
-    "lib": ["DOM"],
+    "lib": ["DOM","ES2022"],
     "sourceMap": true,
     "allowJs": true,
     "jsx": "react",
