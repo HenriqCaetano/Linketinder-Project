@@ -1,7 +1,7 @@
 import {Empresa} from "./Empresa.js";
 
 let listaEmpresas : Empresa[] = [];
-localStorage.setItem("listaEmpresas", listaEmpresas);
+localStorage.setItem("listaEmpresas", JSON.stringify(listaEmpresas));
 
 const submitButton: HTMLElement = document.getElementById("empresa-submit");
 const form:any = document.getElementById("form-empresa")
@@ -17,7 +17,6 @@ submitButton.addEventListener("click", (e:MouseEvent) =>{
 
     let senha:string = formData.get("senha").toString();
     let nome:string = formData.get("nome").toString();
-    let estado:string = formData.get("estado").toString();
     let cep:string = formData.get("cep").toString();
     let pais:string = formData.get("pais").toString();
     let descricao:string = formData.get("descricao").toString();
@@ -31,8 +30,8 @@ submitButton.addEventListener("click", (e:MouseEvent) =>{
     })
 
     //constroi a empresa e adiciona à lista de empresas
-    let novaEmpresa : Empresa = new Empresa(nome, email, senha, estado, cep, descricao, competencias, cnpj, pais);
+    let novaEmpresa : Empresa = new Empresa(nome, email, senha, cep, descricao, competencias, cnpj, pais);
     console.log(novaEmpresa);
     listaEmpresas.push(novaEmpresa);
-    localStorage.setItem("listaEmpresas", listaEmpresas);
+    localStorage.setItem("listaEmpresas", JSON.stringify(listaEmpresas));
 })
