@@ -25,5 +25,8 @@
       </library>
     </orderEntry>
     <orderEntry type="library" name="mockito.all" level="project" />
+    <orderEntry type="library" name="chart" level="project" />
+    <orderEntry type="library" name="chart.js" level="project" />
+    <orderEntry type="library" name="@types/chart.js" level="application" />
   </component>
 </module>
