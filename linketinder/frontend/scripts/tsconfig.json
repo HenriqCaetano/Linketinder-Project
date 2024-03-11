@@ -2,7 +2,7 @@
   "compilerOptions": {
     "outDir": "./",
     "module": "ES2022",
-    "target": "ES6",
+    "target": "ES2022",
     "lib": ["DOM","ES2022"],
     "sourceMap": true,
     "allowJs": true,
