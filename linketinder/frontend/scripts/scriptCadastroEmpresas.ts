@@ -1,7 +1,6 @@
 import {Empresa} from "./Empresa.js";
 
 let listaEmpresas : Empresa[] = [];
-localStorage.setItem("listaEmpresas", JSON.stringify(listaEmpresas));
 
 const submitButton: HTMLElement = document.getElementById("empresa-submit");
 const form:any = document.getElementById("form-empresa")

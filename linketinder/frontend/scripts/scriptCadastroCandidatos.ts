@@ -2,7 +2,6 @@ import {Candidato} from "./Candidato.js";
 
 
 let listaCandidatos : Candidato[] = [];
-localStorage.setItem("listaCandidatos", JSON.stringify(listaCandidatos));
 
 const submitButton: HTMLElement = document.getElementById("candidato-submit");
 const form:any = document.getElementById("form-candidato")
