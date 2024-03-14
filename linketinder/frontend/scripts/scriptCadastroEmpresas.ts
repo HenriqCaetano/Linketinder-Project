@@ -9,17 +9,37 @@ submitButton.addEventListener("click", (e:MouseEvent) =>{
     e.preventDefault();
 
     //obtendo informações do formulário
-    let formData = new FormData(form);
+    let formData : FormData= new FormData(form);
 
-    let email:string = formData.get("email").toString();
     //aqui seria bom verificar se já existe esse email na lista de empresas
+    let email:string = formData.get("email").toString();
+    let emailRegex : RegExp = new RegExp('\\w+@(\\w+\\.)+\\w{2,4}')
+    let emailCheck : boolean = emailRegex.test(email)
 
-    let senha:string = formData.get("senha").toString();
+
     let nome:string = formData.get("nome").toString();
+    let nomeRegex : RegExp = new RegExp('^[a-zA-Z\\s]*$','g')
+    let nomeCheck : boolean = nomeRegex.test(nome)
+
     let cep:string = formData.get("cep").toString();
+    let cepRegex : RegExp = new RegExp('\\d{5}-\\d{3}')
+    let cepCheck : boolean = cepRegex.test(cep)
+
+    let cnpj:string = formData.get("cnpj").toString();
+    let cnpjRegex : RegExp = new RegExp('\\d{2}\\.\\d{3}\\.\\d{3}/0001-\\d{2}')
+    let cnpjCheck : boolean = cnpjRegex.test(cnpj)
+
+    //verificações dos regex
+    if(!emailCheck) alert("email em formato inválido");
+    if(!nomeCheck) alert("nome em formato inválido");
+    if(!cepCheck) alert("CEP em formato inválido");
+    if(!cnpjCheck) alert("CNPJ em formato inválido");
+
+
+    //entradas que não precisam de regex
+    let senha:string = formData.get("senha").toString();
     let pais:string = formData.get("pais").toString();
     let descricao:string = formData.get("descricao").toString();
-    let cnpj:string = formData.get("cnpj").toString();
 
 
     //obtém as competências e retira espaços em branco
